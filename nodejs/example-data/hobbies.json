@@ -1,0 +1,10 @@
+{
+    "hobbies": [{
+        "title": "Video Games",
+        "passion": 5
+    },
+    {
+        "title": "Reading",
+        "passion": 4
+    }]
+}
