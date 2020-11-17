@@ -1,10 +1,12 @@
 import * as express from 'express';
+import * as bp from 'body-parser';
 import {
     details,
     intro,
     education,
     hobbies,
-    work
+    work,
+    addWork
 } from './controllers/';
 
 /**
@@ -13,6 +15,7 @@ import {
 const app = express();
 const { Router } = express;
 const router: express.Router = Router();
+app.use(bp.json());
 app.use('/', router);
 
 /**
@@ -23,6 +26,8 @@ router.get('/details', details);
 router.get('/education', education);
 router.get('/hobbies', hobbies);
 router.get('/work', work);
+
+router.post('/work', addWork);
 
 /**
  * Error handling

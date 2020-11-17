@@ -12,7 +12,15 @@ export interface Iwork {
     }]
 }
 
+const fileLocation = path.join(__dirname, '../../data/work.json');
+const file = JSON.parse(fs.readFileSync(fileLocation, 'utf-8'));
+
 export async function work(req: Request, res: Response, next: NextFunction): Promise<Response<Iwork>> {
-    const file = JSON.parse(fs.readFileSync(path.join(__dirname, '../../data/work.json'), 'utf-8'));
     return res.status(200).json(file);
 };
+
+export async function addWork(req: Request, res: Response, next: NextFunction) {
+    file.work.push(req.body);
+    fs.writeFileSync(fileLocation, JSON.stringify(file.work));
+    res.send(); 
+}
