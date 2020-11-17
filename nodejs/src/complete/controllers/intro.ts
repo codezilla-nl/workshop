@@ -1,3 +1,5 @@
+import * as fs from 'fs';
+import * as path from 'path';
 import { Request, Response, NextFunction } from 'express';
 
 export interface Iintro {
@@ -8,10 +10,6 @@ export interface Iintro {
 }
 
 export async function intro(req: Request, res: Response, next: NextFunction): Promise<Response<Iintro>> {
-    return res.status(200).json({
-        intro: {
-            aboutMe: 'John',
-            description: 'Something about me'
-        }
-    });
+    const file = JSON.parse(fs.readFileSync(path.join(__dirname, '../../data/intro.json'), 'utf-8'));
+    return res.status(200).json(file);
 };

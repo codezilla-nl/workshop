@@ -1,3 +1,5 @@
+import * as fs from 'fs';
+import * as path from 'path';
 import { Request, Response, NextFunction } from 'express';
 
 export interface Ieducation {
@@ -10,17 +12,6 @@ export interface Ieducation {
 }
 
 export async function education(req: Request, res: Response, next: NextFunction): Promise<Response<Ieducation>> {
-    return res.status(200).json({
-        education: [{
-            period: '2008-2012',
-            institute: 'University of Amsterdam',
-            degree: 'B ICT',
-            certificate: true
-        },
-        {
-            period: '2003-2008',
-            institute: 'High School',
-            certificate: true
-        }]
-    });
+    const file = JSON.parse(fs.readFileSync(path.join(__dirname, '../../data/education.json'), 'utf-8'));
+    return res.status(200).json(file);
 };

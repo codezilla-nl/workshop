@@ -1,3 +1,5 @@
+import * as fs from 'fs';
+import * as path from 'path';
 import { Request, Response, NextFunction } from 'express';
 
 export interface Ihobbies {
@@ -8,17 +10,8 @@ export interface Ihobbies {
 }
 
 export async function hobbies(req: Request, res: Response, next: NextFunction): Promise<Response<Ihobbies>> {
-    return res.status(200).json({
-        hobbies: [{
-            title: 'Video Games',
-            passion: 5
-        },
-        {
-            title: 'Reading',
-            passion: 4
-        },
-        ]
-    });
+    const file = JSON.parse(fs.readFileSync(path.join(__dirname, '../../data/hobbies.json'), 'utf-8'));
+    return res.status(200).json(file);
 };
 
 

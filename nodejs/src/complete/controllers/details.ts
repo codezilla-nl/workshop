@@ -1,3 +1,5 @@
+import * as fs from 'fs';
+import * as path from 'path';
 import { Request, Response, NextFunction } from 'express';
 
 export interface Idetails {
@@ -10,12 +12,6 @@ export interface Idetails {
 }
 
 export async function details(req: Request, res: Response, next: NextFunction): Promise<Idetails | Response> {
-    return res.status(200).json({
-        details: {
-            address: 'Tractieweg',
-            city: 'Utrecht',
-            emailAddress: 'info@company.com',
-            phoneNumber: '+31612345678'
-        }
-    });
+    const file = JSON.parse(fs.readFileSync(path.join(__dirname, '../../data/details.json'), 'utf-8'));
+    return res.status(200).json(file);
 };
