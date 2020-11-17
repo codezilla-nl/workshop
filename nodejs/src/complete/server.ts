@@ -6,7 +6,9 @@ import {
     education,
     hobbies,
     work,
-    addWork
+    addWork,
+    addEducation,
+    addHobbies
 } from './controllers/';
 
 /**
@@ -27,6 +29,8 @@ router.get('/education', education);
 router.get('/hobbies', hobbies);
 router.get('/work', work);
 
+router.post('/education', addEducation);
+router.post('/hobbies', addHobbies);
 router.post('/work', addWork);
 
 /**
