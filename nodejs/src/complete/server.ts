@@ -1,14 +1,14 @@
 import * as express from 'express';
 import * as bp from 'body-parser';
 import {
-    details,
-    intro,
-    education,
-    hobbies,
-    work,
-    addWork,
+    getDetails,
+    getEducation,
+    getHobbies,
+    getIntro,
+    getWork,
     addEducation,
     addHobbies,
+    addWork,
     updateDetails,
     updateEducation,
     updateHobbies,
@@ -19,23 +19,19 @@ import {
     deleteWork
 } from './controllers/';
 
-/**
- * Init
- */
+ // Init Express with body-parser and router
 const app = express();
 const { Router } = express;
 const router: express.Router = Router();
 app.use(bp.json());
 app.use('/', router);
 
-/**
- * Routes
- */
-router.get('/intro', intro);
-router.get('/details', details);
-router.get('/education', education);
-router.get('/hobbies', hobbies);
-router.get('/work', work);
+// Routes
+router.get('/intro', getIntro);
+router.get('/details', getDetails);
+router.get('/education', getEducation);
+router.get('/hobbies', getHobbies);
+router.get('/work', getWork);
 
 router.post('/education', addEducation);
 router.post('/hobbies', addHobbies);
@@ -50,16 +46,13 @@ router.put('/work/:id', updateWork);
 router.delete('/hobbies/:id', deleteHobbies);
 router.delete('/education/:id', deleteEducation);
 router.delete('/work/:id', deleteWork);
-/**
- * Error handling
- */
+
+// Error handling
 app.use((error, req, res, next) => {
     res.sendStatus(503);
 });
 
-/**
- * Start server
- */
+// Start server
 app.listen(4000, () => {
     console.log(`Listening on port: 4000`);
 });

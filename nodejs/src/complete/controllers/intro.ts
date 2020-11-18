@@ -12,7 +12,7 @@ export interface Iintro {
     }
 }
 
-export async function intro(req: Request, res: Response, next: NextFunction): Promise<Response<Iintro>> {
+export async function getIntro(req: Request, res: Response, next: NextFunction): Promise<Response<Iintro>> {
     return res.status(200).json(file);
 };
 

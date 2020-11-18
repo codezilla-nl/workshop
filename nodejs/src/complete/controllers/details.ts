@@ -13,7 +13,7 @@ export interface Idetails {
     }
 }
 
-export async function details(req: Request, res: Response, next: NextFunction): Promise<Response<Idetails>> {
+export async function getDetails(req: Request, res: Response, next: NextFunction): Promise<Response<Idetails>> {
     return res.status(200).json(file);
 };
 
