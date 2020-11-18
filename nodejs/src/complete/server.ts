@@ -8,7 +8,12 @@ import {
     work,
     addWork,
     addEducation,
-    addHobbies
+    addHobbies,
+    updateDetails,
+    updateEducation,
+    updateHobbies,
+    updateIntro,
+    updateWork
 } from './controllers/';
 
 /**
@@ -32,6 +37,12 @@ router.get('/work', work);
 router.post('/education', addEducation);
 router.post('/hobbies', addHobbies);
 router.post('/work', addWork);
+
+router.put('/details', updateDetails);
+router.put('/intro', updateIntro);
+router.put('/education/:id', updateEducation);
+router.put('/hobbies/:id', updateHobbies);
+router.put('/work/:id', updateWork);
 
 /**
  * Error handling
