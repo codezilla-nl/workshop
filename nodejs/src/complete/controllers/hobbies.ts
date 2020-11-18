@@ -15,7 +15,6 @@ export interface IhobbiesItem {
 }
 
 export async function hobbies(req: Request, res: Response, next: NextFunction): Promise<Response<Ihobbies>> {
-    const file = JSON.parse(fs.readFileSync(path.join(__dirname, '../../data/hobbies.json'), 'utf-8'));
     return res.status(200).json(file);
 };
 
@@ -34,4 +33,15 @@ export async function updateHobbies(req: Request, res: Response, next: NextFunct
 
     fs.writeFileSync(fileLocation, JSON.stringify(file));
     res.status(200).send({ 'updated': true });
+}
+
+export async function deleteHobbies(req: Request, res: Response, next: NextFunction) {
+    const id = req.params.id;
+    
+    const allHobbiesExpectTheRemovedOne = file.hobbies.filter(item => {
+        return item.id != id; // strict check does not remove the given id
+    });
+
+    fs.writeFileSync(fileLocation, JSON.stringify({ hobbies: allHobbiesExpectTheRemovedOne }));
+    res.status(200).send({ 'deleted': true });
 }

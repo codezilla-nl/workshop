@@ -13,7 +13,10 @@ import {
     updateEducation,
     updateHobbies,
     updateIntro,
-    updateWork
+    updateWork,
+    deleteEducation,
+    deleteHobbies,
+    deleteWork
 } from './controllers/';
 
 /**
@@ -44,6 +47,9 @@ router.put('/education/:id', updateEducation);
 router.put('/hobbies/:id', updateHobbies);
 router.put('/work/:id', updateWork);
 
+router.delete('/hobbies/:id', deleteHobbies);
+router.delete('/education/:id', deleteEducation);
+router.delete('/work/:id', deleteWork);
 /**
  * Error handling
  */

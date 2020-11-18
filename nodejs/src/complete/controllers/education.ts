@@ -31,7 +31,7 @@ export async function addEducation(req: Request, res: Response, next: NextFuncti
 export async function updateEducation(req: Request, res: Response, next: NextFunction): Promise<void> {
     const index = req.params.id;
     const body: IeducationItem = req.body;
-    
+
     file.education[index].period = body.period;
     file.education[index].institute = body.institute;
     file.education[index].degree = body.degree;
@@ -40,3 +40,14 @@ export async function updateEducation(req: Request, res: Response, next: NextFun
     fs.writeFileSync(fileLocation, JSON.stringify(file));
     res.status(200).send({ 'updated': true });
 };
+
+export async function deleteEducation(req: Request, res: Response, next: NextFunction) {
+    const id = req.params.id;
+    
+    const allEducationsExpectTheRemovedOne = file.education.filter(item => {
+        return item.id != id; // strict check does not remove the given id
+    });
+
+    fs.writeFileSync(fileLocation, JSON.stringify({ educations: allEducationsExpectTheRemovedOne }));
+    res.status(200).send({ 'deleted': true });
+}

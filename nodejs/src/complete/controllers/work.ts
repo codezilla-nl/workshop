@@ -40,3 +40,14 @@ export async function updateWork(req: Request, res: Response, next: NextFunction
     fs.writeFileSync(fileLocation, JSON.stringify(file));
     res.status(200).send({ 'updated': true });
 };
+
+export async function deleteWork(req: Request, res: Response, next: NextFunction) {
+    const id = req.params.id;
+    
+    const allWorkExpectTheRemovedOne = file.work.filter(item => {
+        return item.id != id; // strict check does not remove the given id
+    });
+
+    fs.writeFileSync(fileLocation, JSON.stringify({ educations: allWorkExpectTheRemovedOne }));
+    res.status(200).send({ 'deleted': true });
+}
