@@ -1,0 +1,8 @@
+{
+  "address": "Coolstreet 123",
+  "city": "Amsterdam",
+  "phoneNumber": "0612341234",
+  "emailAddress": "awesome@email.com",
+  "story1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nisi quam, pretium vel tortor non, tempus varius purus. Mauris efficitur viverra elit, nec consequat augue ullamcorper id. Vivamus semper et metus et posuere. Vestibulum sit amet tempus massa. Nam laoreet ligula nec nisl faucibus consequat. Etiam aliquet dolor ut euismod vehicula.",
+  "story2": "Nunc rutrum nunc at neque feugiat rhoncus sed at velit. Suspendisse potenti. Nulla sit amet pulvinar sem. Vivamus suscipit pretium tortor sit amet auctor. Aliquam porttitor pretium orci a tristique. Duis ipsum nisl, imperdiet ut pellentesque ut, venenatis vitae sapien."
+}

@@ -1,0 +1,36 @@
+{
+  "items": [
+    {
+      "id": 0,
+      "role": "Test Engineer",
+      "company": "Current_company",
+      "location": "???",
+      "skills": ["E2E, Automated Testing, Cucumber, Gherking"],
+      "period": "xx-2020 - Present"
+    },
+    {
+      "id": 1,
+      "role": "",
+      "company": "",
+      "location": "",
+      "skills": [""],
+      "period": "YYYY-MM - YYYY-MM"
+    },
+    {
+      "id": 2,
+      "role": "",
+      "company": "",
+      "location": "",
+      "skills": [""],
+      "period": "YYYY-MM - YYYY-MM"
+    },
+    {
+      "id": 3,
+      "role": "",
+      "company": "",
+      "location": "",
+      "skills": [""],
+      "period": "YYYY-MM - YYYY-MM"
+    }
+  ]
+}

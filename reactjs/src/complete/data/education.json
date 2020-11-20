@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "id": 0,
+      "degree": "HBO Bachelor",
+      "location": "Amsterdam",
+      "institute": "HvA",
+      "certificate": true,
+      "period": "01-2007 - 12-2011"
+    },
+    {
+      "id": 1,
+      "degree": "High School",
+      "location": "Amsterdam",
+      "institute": "Lyceum",
+      "certificate": true,
+      "period": "2002"
+    },
+    {
+      "id": 2,
+      "degree": "Elementary School",
+      "location": "Amsterdam",
+      "institute": "Montessori",
+      "certificate": false,
+      "period": "??"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+/* Reset margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* See the CSS3 cheat-sheet in the /images folder for a quick overview */
+body {
+  /* text-align: center; */
+  background-color: black;
+  color: white;
+  padding: 20px;
+  font-family: Verdana, sans-serif;
+}
+section {
+  margin-bottom: 24px;
+}
+
+h1, h2, h3, h4, h5 {
+  color: #68d517;
+  margin-bottom: 12px;
+}
+
+ul {
+  padding: 8px;
+  margin-bottom: 8px;
+  margin-left: 12px;
+}
+
+p {
+  margin-bottom: 8px;
+}
+
+.app {
+  padding: 16px;
+  margin: 24px;
+}
+
+.intro {
+  /* background-color: black; */
+  /* Make the font-black
+  Make the background: white; */
+
+}
+a, .codezilla-green {
+  color: #68d517;
+}
+/*
+.details {
+
+}
+
+.work{
+
+}
+
+.education {
+
+}
+
+.hobbies {
+
+} */

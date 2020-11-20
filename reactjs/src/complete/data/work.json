@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "id": 0,
+      "role": "Front-end Engineer",
+      "company": "kpn",
+      "location": "amsterdam",
+      "skills": ["VueJS, Jenkins, Robot, Jest"],
+      "period": "05-2020 - Present"
+    },
+    {
+      "id": 1,
+      "role": "Front-end Engineer",
+      "company": "klm",
+      "location": "amstelveen",
+      "skills": ["React JS, NodeJS, Postman, Typescript"],
+      "period": "04-2020 - 08-2018"
+    },
+    {
+      "id": 2,
+      "role": "Front-end Engineer",
+      "company": "ahold",
+      "location": "zaandam",
+      "skills": ["Backbone JS, React JS"],
+      "period": "04-2015 - 07-2018"
+    }
+  ]
+}
