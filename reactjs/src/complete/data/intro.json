@@ -1,5 +1,6 @@
 {
   "aboutMe": "Hi, My name is Rory",
+  "age": 36,
   "description": "I am a Front-end developer with a passion for Front-end Development!",
   "welcomeMessage": "Welcome to today's workshop!",
   "goal": "The goal will be to create your own portfolio app in React, or at least the start of one."

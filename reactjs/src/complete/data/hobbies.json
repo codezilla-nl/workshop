@@ -3,26 +3,31 @@
     {
       "id": 0,
       "title": "Food",
+      "description": "Cooking and eating is great you know.",
       "passion": 5
     },
     {
       "id": 1,
       "title": "Games",
+      "description": "What better way to relax?",
       "passion": 5
     },
     {
       "id": 2,
       "title": "Music",
+      "description": "So many genres to enjoy",
       "passion": 2
     },
     {
       "id": 3,
       "title": "Movies",
+      "description": "Action? Comedy?",
       "passion": 2
     },
     {
       "id": 4,
       "title": "Travel",
+      "description": "To see the world!",
       "passion": 1
     }
   ]

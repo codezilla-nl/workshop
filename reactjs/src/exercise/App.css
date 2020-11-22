@@ -12,17 +12,36 @@ body {
   padding: 20px;
   font-family: Verdana, sans-serif;
 }
+
 section {
   margin-bottom: 24px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #68d517;
 }
 
 h1, h2, h3, h4, h5 {
   color: #68d517;
-  margin-bottom: 12px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  padding-left: 16px;
+}
+
+header h2 {
+  margin: 8px;
 }
 
 ul {
-  padding: 8px;
+  padding: 0 8px;
   margin-bottom: 8px;
   margin-left: 12px;
 }
@@ -36,12 +55,18 @@ p {
   margin: 24px;
 }
 
-.intro {
-  /* background-color: black; */
-  /* Make the font-black
-  Make the background: white; */
-
+.feature {
+  margin-bottom: 16px;
+  /* border-bottom: 1px solid #68d517; */
+  width: 100%;
+  padding-bottom: 8px;
 }
+
+.feature:last-child {
+  margin-bottom: 0;
+  border-bottom: 0;
+}
+
 a, .codezilla-green {
   color: #68d517;
 }
