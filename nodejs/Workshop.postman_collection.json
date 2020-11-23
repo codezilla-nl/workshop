@@ -1,0 +1,450 @@
+{
+	"info": {
+		"_postman_id": "00bfb5a9-95d3-4852-bb47-8a1af2f3e943",
+		"name": "Workshop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Details",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:4000/details",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Education",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:4000/education",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"education"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Hobbies",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:4000/hobbies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"hobbies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Intro",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:4000/intro",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"intro"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Work",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:4000/work",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"work"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Details",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"address\": \"Oudegracht 300\",\n        \"city\": \"Utrecht\",\n        \"emailAddress\": \"info@me.com\",\n        \"phoneNumber\": \"+31687654321\"\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:4000/details/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"details",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Education",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 0,\n    \"period\": \"1980-1990\",\n    \"institute\": \"University of Utrecht\",\n    \"degree\": \"Msc\",\n    \"certificate\": true\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/education/0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"education",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Intro",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"aboutMe\": \"Patrick\",\n    \"description\": \"This is me\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/intro/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"intro",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Hobbies",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Writing\",\n    \"passion\": 3\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/hobbies/0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"hobbies",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Work",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"role\": \"QA\",\n    \"company\": \"Another company\",\n    \"location\": \"Utrecht\",\n    \"skills\": [\"Cypress\"],\n    \"period\": \"2016-2018\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/work/0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"work",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Education",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"period\": \"1990-1998\",\n    \"institute\": \"Primary School\",\n    \"certificate\": true\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/education",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"education"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Hobbies",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Writing\",\n    \"passion\": 3\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/hobbies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"hobbies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Work",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"role\": \"CEO\",\n    \"company\": \"Another company\",\n    \"location\": \"Utrecht\",\n    \"skills\": [\"Cypress\"],\n    \"period\": \"2016-2018\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/work",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"work"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Education",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:4000/education/0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"education",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Hobbies",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:4000/hobbies/0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"hobbies",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Work",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:4000/work/0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"work",
+						"0"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
