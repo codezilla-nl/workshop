@@ -8,7 +8,7 @@ function starRating(number) {
 
 export default function Hobbies (props) {
   const {items} = props;
-  const renderHobbies = items.map((hobby, index) => {
+  const renderHobbies = items.map(hobby => {
     const {id, title, passion, description} = hobby;
 
     return (

@@ -1,7 +1,7 @@
 export default function Education(props) {
   const { items } = props;
 
-  return items.map((school, index) => {
+  return items.map(school => {
     const {id, degree, institute, location, certificate, period} = school;
 
     return (

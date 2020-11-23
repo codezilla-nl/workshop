@@ -6,7 +6,7 @@ function convertToUpperCase(company = '') {
 export default function Work(props) {
   const { items } = props;
 
-  return items.map((job, index) => {
+  return items.map(job => {
       const {id, role, company, location, skills, period} = job;
       const allCapsCompany = convertToUpperCase(company);
 
