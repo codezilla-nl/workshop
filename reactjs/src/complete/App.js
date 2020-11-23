@@ -1,96 +1,105 @@
 import './App.css';
+
+// Data
 import intro from './data/intro.json';
 import details from './data/details.json';
 import work from './data/work.json';
 import education from './data/education.json';
 import hobbies from './data/hobbies.json';
-// import Intro from './components/intro';
 
-function starRating(number) {
-  let stars = '';
-  for (let index = 1; index <= number; index++) {
-    stars += '⭐';
-  }
-  return stars;
-}
+// Components
+import Intro from './components/intro';
+import Details from './components/details';
+import Work from './components/work';
+import Education from './components/education';
+import Hobbies from './components/hobbies';
+// import {LikeButton} from './components/likeButton';
 
-function convertToUpperCase(company = '') {
-  return company.toUpperCase();
-}
+// function starRating(number) {
+//   let stars = '';
+//   for (let index = 1; index <= number; index++) {
+//     stars += '⭐';
+//   }
+//   return stars;
+// }
 
-function getWork(items) {
-  return items.map((job, index) => {
-      const {id, role, company, location, skills, period} = job;
-      const allCapsCompany = convertToUpperCase(company);
+// function convertToUpperCase(company = '') {
+//   return company.toUpperCase();
+// }
 
-      return (
-        <div className="feature job" key={id}>
-          <p><b>Role</b>: {role}</p>
-          <p>Company: {allCapsCompany}</p>
-          <p>Location: {location}</p>
-          <p>Skills: {skills}</p>
-          <p>Period: {period}</p>
-        </div>
-      )
-  });
-}
+// function getWork(items) {
+//   return items.map((job, index) => {
+//       const {id, role, company, location, skills, period} = job;
+//       const allCapsCompany = convertToUpperCase(company);
 
-function getEducation(items) {
-  return items.map((school, index) => {
-    const {id, degree, institute, location, certificate, period} = school;
-    return (
-      <div className="feature school" key={id}>
-        <p>Degree: {degree}</p>
-        <p>Institute: {institute}</p>
-        <p>Located at: {location}</p>
-        <p>Received a certificate: {certificate ? '👍' : '👎'}</p>
-        <p>Period: {period}</p>
-      </div>
-    )
-  });
-}
+//       return (
+//         <div className="feature job" key={id}>
+//           <p><b>Role</b>: {role}</p>
+//           <p>Company: {allCapsCompany}</p>
+//           <p>Location: {location}</p>
+//           <p>Skills: {skills}</p>
+//           <p>Period: {period}</p>
+//         </div>
+//       )
+//   });
+// }
 
-function Intro (props) {
-  const { aboutMe, age, description, welcomeMessage, goal } = props;
+// function getEducation(items) {
+//   return items.map((school, index) => {
+//     const {id, degree, institute, location, certificate, period} = school;
+//     return (
+//       <div className="feature school" key={id}>
+//         <p>Degree: {degree}</p>
+//         <p>Institute: {institute}</p>
+//         <p>Located at: {location}</p>
+//         <p>Received a certificate: {certificate ? '👍' : '👎'}</p>
+//         <p>Period: {period}</p>
+//       </div>
+//     )
+//   });
+// }
 
-  return (
-    <section className="intro">
-      <p>{aboutMe}</p>
-      <p>I am {age} years old, which is {age * 7} in dog years.</p>
-      <p>{description}</p>
-      <p>{welcomeMessage}</p>
-      <p>{goal}</p>
-    </section>
-  )
-};
+// function Intro (props) {
+//   const { aboutMe, age, description, welcomeMessage, goal } = props;
 
-// Custom React Element
-function Hobbies (props) {
-  const {listOfHobbies} = props;
-  const renderHobbies = listOfHobbies.items.map((hobby, index) => {
-    const {id, title, passion, description} = hobby;
+//   return (
+//     <section className="intro">
+//       <p>{aboutMe}</p>
+//       <p>I am {age} years old, which is {age * 7} in dog years.</p>
+//       <p>{description}</p>
+//       <p>{welcomeMessage}</p>
+//       <p>{goal}</p>
+//     </section>
+//   )
+// };
 
-    return (
-      <div className="feature hobby" key={id}>
-        <p><b>{title}</b> {starRating(passion)}</p>
-        <p>{description}</p>
-      </div>
-    );
-  });
+// // Custom React Element
+// function Hobbies (props) {
+//   const {listOfHobbies} = props;
+//   const renderHobbies = listOfHobbies.items.map((hobby, index) => {
+//     const {id, title, passion, description} = hobby;
 
-  let initialRating = 0;
-  const totalRating = hobbies.items.reduce((acc, curr) => acc + curr.passion, initialRating);
+//     return (
+//       <div className="feature hobby" key={id}>
+//         <p><b>{title}</b> {starRating(passion)}</p>
+//         <p>{description}</p>
+//       </div>
+//     );
+//   });
 
-  return (
-    <>
-      <h2>Hobbies</h2>
-      <section className="hobbies">
-        {renderHobbies}
-        <span>Total passion: {totalRating} ⭐</span><br/>
-      </section>
-    </>
-  );
-}
+//   let initialRating = 0;
+//   const totalRating = hobbies.items.reduce((acc, curr) => acc + curr.passion, initialRating);
+
+//   return (
+//     <>
+//       <h2>Hobbies</h2>
+//       <section className="hobbies">
+//         {renderHobbies}
+//         <span>Total passion: {totalRating} ⭐</span><br/>
+//       </section>
+//     </>
+//   );
+// }
 
 function App() {
     return (
@@ -98,7 +107,7 @@ function App() {
       <header>
         <h2>Welcome to my online portfolio</h2>
       </header>
-
+      {/* <LikeButton /> */}
       <Intro
         aboutMe={intro.aboutMe}
         age={intro.age}
@@ -108,24 +117,37 @@ function App() {
       />
 
       <h2>Some more things about me</h2>
-      <section id="details" className="details">
-        <p>I live at {details.address} in the cool town of {details.city}</p>
-        <p>If you need help, you can often call me at <a href={`tel:${details.phoneNumber}`}>{details.phoneNumber}</a> or send an e-mail to <a href={`mailto:${details.emailAddress}`}>{details.emailAddress}</a></p>
-        <p>Ever seen lorem ipsum? {details.story1} </p>
-        <p>{details.story2} </p>
-      </section>
+      <Details
+        city={details.city}
+        emailAddress={details.emailAddress}
+        address={details.address}
+        phoneNumber={details.phoneNumber}
+        story={details.story1}
+        secondStory={details.story2}
+      />
 
       <h2>Work experience</h2>
-      <section id="work" className="work">
+      {/* <section id="work" className="work">
         {getWork(work.items)}
+      </section> */}
+      <section id="work" className="work">
+        <Work
+          items={work.items}
+        />
       </section>
 
       <h2>Education</h2>
-      <section id="education" className="education">
+      {/* <section id="education" className="education">
         {getEducation(education.items)}
+      </section> */}
+      <section id="education" className="education">
+        <Education
+          items={education.items}
+        />
       </section>
-
-      <Hobbies listOfHobbies={hobbies} />
+      <Hobbies
+        items={hobbies.items}
+      />
     </div>
   );
 }
