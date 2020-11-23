@@ -1,6 +1,7 @@
 {
-  "aboutMe": "Hi, My name is __",
-  "description": "I am a __ with a passion for __!",
-  "welcomeMessage": "Welcome to my portfolio!",
-  "goal": "Today I will learn about __."
+  "aboutMe": "Hi, My name is ___",
+  "age": 0,
+  "description": "I am a ___ with a passion for ___!",
+  "welcomeMessage": "Welcome to today's workshop!",
+  "goal": "The goal will be to create your own portfolio app in React, or at least the start of one."
 }

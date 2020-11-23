@@ -6,7 +6,7 @@
       "company": "Current_company",
       "location": "???",
       "skills": ["E2E, Automated Testing, Cucumber, Gherking"],
-      "period": "xx-2020 - Present"
+      "period": "05-2020 - Present"
     },
     {
       "id": 1,
@@ -14,7 +14,7 @@
       "company": "",
       "location": "",
       "skills": [""],
-      "period": "YYYY-MM - YYYY-MM"
+      "period": "MM-YYYY - MM-YYYY"
     },
     {
       "id": 2,
@@ -22,15 +22,7 @@
       "company": "",
       "location": "",
       "skills": [""],
-      "period": "YYYY-MM - YYYY-MM"
-    },
-    {
-      "id": 3,
-      "role": "",
-      "company": "",
-      "location": "",
-      "skills": [""],
-      "period": "YYYY-MM - YYYY-MM"
+      "period": "MM-YYYY - MM-YYYY"
     }
   ]
 }

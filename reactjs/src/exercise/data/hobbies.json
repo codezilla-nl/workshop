@@ -3,27 +3,32 @@
     {
       "id": 0,
       "title": "Food",
+      "description": "Cooking and eating is great you know.",
       "passion": 5
     },
     {
       "id": 1,
       "title": "",
+      "description": "",
       "passion": 5
     },
     {
       "id": 2,
       "title": "",
-      "passion": 5
+      "description": "",
+      "passion": 2
     },
     {
       "id": 3,
       "title": "",
-      "passion": 5
+      "description": "",
+      "passion": 2
     },
     {
       "id": 4,
       "title": "",
-      "passion": 5
+      "description": "",
+      "passion": 1
     }
   ]
 }

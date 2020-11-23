@@ -2,19 +2,19 @@
   "items": [
     {
       "id": 0,
-      "degree": "HBO Bachelor",
-      "location": "Amsterdam",
-      "institute": "HvA",
+      "degree": "",
+      "location": "",
+      "institute": "TU",
       "certificate": true,
-      "period": "01-2007 - 12-2011"
+      "period": "mm-yyyy - mm-yyyy"
     },
     {
       "id": 1,
       "degree": "",
       "location": "",
       "institute": "",
-      "certificate": false,
-      "period": ""
+      "certificate": true,
+      "period": "mm-yyyy - mm-yyyy"
     },
     {
       "id": 2,
@@ -22,7 +22,7 @@
       "location": "",
       "institute": "",
       "certificate": false,
-      "period": ""
+      "period": "mm-yyyy - mm-yyyy"
     }
   ]
 }

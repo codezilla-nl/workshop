@@ -4,6 +4,7 @@ import details from './data/details.json';
 import work from './data/work.json';
 import education from './data/education.json';
 import hobbies from './data/hobbies.json';
+// import Intro from './components/intro';
 
 function starRating(number) {
   let stars = '';
@@ -49,8 +50,22 @@ function getEducation(items) {
   });
 }
 
+function Intro (props) {
+  const { aboutMe, age, description, welcomeMessage, goal } = props;
+
+  return (
+    <section className="intro">
+      <p>{aboutMe}</p>
+      <p>I am {age} years old, which is {age * 7} in dog years.</p>
+      <p>{description}</p>
+      <p>{welcomeMessage}</p>
+      <p>{goal}</p>
+    </section>
+  )
+};
+
 // Custom React Element
-const Hobbies = (props) => {
+function Hobbies (props) {
   const {listOfHobbies} = props;
   const renderHobbies = listOfHobbies.items.map((hobby, index) => {
     const {id, title, passion, description} = hobby;
@@ -84,13 +99,13 @@ function App() {
         <h2>Welcome to my online portfolio</h2>
       </header>
 
-      <section className="intro">
-        <p>{intro.aboutMe}</p>
-        <p>I am {intro.age} years old, which is {intro.age * 7} in dog years.</p>
-        <p>{intro.description}</p>
-        <p>{intro.welcomeMessage}</p>
-        <p>{intro.goal}</p>
-      </section>
+      <Intro
+        aboutMe={intro.aboutMe}
+        age={intro.age}
+        description={intro.description}
+        welcomeMessage={intro.welcomeMessage}
+        goal={intro.goal}
+      />
 
       <h2>Some more things about me</h2>
       <section id="details" className="details">
