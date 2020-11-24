@@ -12,6 +12,10 @@ function App() {
         <h2>Welcome to my online portfolio</h2>
       </header>
 
+      {/* VV JSX exercise goes here! VV */}
+
+      {/* ^^ JSX exercise goes here! ^^ */}
+
       <section id="intro" className="intro">
       </section>
 
