@@ -1,3 +1,5 @@
+console.log('========= Excercise 1 =========');
+
 // 1. Create a function which returns a string
 
 // 2. Create a function which returns true or false

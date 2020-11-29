@@ -8,7 +8,9 @@
     "test": "./node_modules/.bin/jest --verbose --coverage",
     "build": "./node_modules/.bin/tsc",
     "clean": "./node_modules/.bin/rimraf dist",
-    "dev": "./node_modules/.bin/nodemon src/complete/server.ts --watch src --exec ts-node --allowJs"
+    "dev": "./node_modules/.bin/nodemon src/complete/server.ts --watch src --exec ts-node --allowJs",
+    "exe1": "./node_modules/.bin/ts-node src/excercise-types/interfaces-and-types.ts",
+    "exe2": "./node_modules/.bin/ts-node src/excercise-types/advanced-types.ts"
   },
   "author": "Patrick Kraaij",
   "license": "ISC",
