@@ -6,7 +6,11 @@ const fileLocation = path.join(__dirname, '../../../../reactjs/src/exercise/data
 const file = JSON.parse(fs.readFileSync(fileLocation, 'utf-8'));
 
 export interface Iintro {
-    name: string;
+    aboutMe: string;
+    age: number;
+    description: string;
+    welcomeMessage: string;
+    goal: string;
 }
 
 export async function intro(req: Request, res: Response, next: NextFunction): Promise<Response<Iintro>> {

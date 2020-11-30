@@ -11,11 +11,12 @@ export interface Ieducation {
 }
 
 export interface IeducationItem {
-    id: boolean;
-    period: string;
+    id?: number;
+    degree: string;
+    location: string;
     institute: string;
-    degree?: string;
     certificate: boolean;
+    period: string;
 }
 
 export async function getEducation(req: Request, res: Response, next: NextFunction): Promise<Response<Ieducation>> {
@@ -25,13 +26,13 @@ export async function getEducation(req: Request, res: Response, next: NextFuncti
 
 export async function addEducation(req: Request, res: Response, next: NextFunction) {
     // add new content to JSON
-    file.education.push(req.body);
+    file.items.push(req.body);
 
     // save JSON
-    fs.writeFileSync(fileLocation, JSON.stringify(file.education));
+    fs.writeFileSync(fileLocation, JSON.stringify(file.items));
 
     // send success message
-    res.status(200);
+    res.status(200).send();
 }
 
 export async function updateEducation(req: Request, res: Response, next: NextFunction): Promise<void> {
@@ -42,16 +43,17 @@ export async function updateEducation(req: Request, res: Response, next: NextFun
     const body: IeducationItem = req.body;
 
     // assign new values to existing item
-    file.education[index].period = body.period;
-    file.education[index].institute = body.institute;
-    file.education[index].degree = body.degree;
-    file.education[index].certificate = body.certificate;
+    file.items[index].degree = body.degree;
+    file.items[index].location = body.location;
+    file.items[index].institute = body.institute;
+    file.items[index].certificate = body.certificate;
+    file.items[index].period = body.period;
 
     // save JSON
     fs.writeFileSync(fileLocation, JSON.stringify(file));
 
     // send success message
-    res.status(200);
+    res.status(200).send();
 };
 
 export async function deleteEducation(req: Request, res: Response, next: NextFunction) {
@@ -59,13 +61,15 @@ export async function deleteEducation(req: Request, res: Response, next: NextFun
     const id = req.params.id;
     
     // retrieve all items expect the one you want to delete
-    const allEducationsExpectTheRemovedOne = file.education.filter(item => {
+    const allEducationsExpectTheRemovedOne = file.items.filter(item => {
         return item.id != id; // strict check does not remove the given id
     });
 
+console.log(allEducationsExpectTheRemovedOne);
+
     // save JSON
-    fs.writeFileSync(fileLocation, JSON.stringify({ educations: allEducationsExpectTheRemovedOne }));
+    fs.writeFileSync(fileLocation, JSON.stringify({ items: allEducationsExpectTheRemovedOne }));
 
     // send success message
-    res.status(200);
+    res.status(200).send();
 }

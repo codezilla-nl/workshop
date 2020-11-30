@@ -49,6 +49,13 @@ router.delete('/work/:id', deleteWork);
 
 // Error handling
 app.use((error, req, res, next) => {
+    console.log('=================================');
+    console.log('=================================');
+    console.log('=================================');
+    console.log('=================================');
+    console.log('=================================');
+    console.log('=================================');
+    console.log('=================================');
     res.sendStatus(503);
 });
 

@@ -6,29 +6,31 @@ import { Request, Response, NextFunction } from 'express';
 const fileLocation = path.join(__dirname, '../../../../reactjs/src/exercise/data/hobbies.json');
 const file = JSON.parse(fs.readFileSync(fileLocation, 'utf-8'));
 
-export interface Ihobbies {
-    hobbies: IhobbiesItem;
+export interface IHobbies {
+    hobbies: IHobbiesItem;
 }
 
-export interface IhobbiesItem {
+export interface IHobbiesItem {
+    id?: number;
+    description: string;
     title: string;
     passion: number;
 }
 
-export async function getHobbies(req: Request, res: Response, next: NextFunction): Promise<Response<Ihobbies>> {
+export async function getHobbies(req: Request, res: Response, next: NextFunction): Promise<Response<IHobbies>> {
     // send the content in the JSON file
     return res.status(200).json(file);
 };
 
 export async function addHobbies(req: Request, res: Response, next: NextFunction) {
     // add new content to JSON
-    file.hobbies.push(req.body);
+    file.items.push(req.body);
 
     // save JSON
-    fs.writeFileSync(fileLocation, JSON.stringify(file.hobbies));
+    fs.writeFileSync(fileLocation, JSON.stringify(file.items));
 
     // send success message
-    res.status(200);
+    res.status(200).send();
 }
 
 export async function updateHobbies(req: Request, res: Response, next: NextFunction) {
@@ -36,17 +38,19 @@ export async function updateHobbies(req: Request, res: Response, next: NextFunct
     const index = req.params.id;
 
     // get the post body
-    const body: IhobbiesItem = req.body;
+    const body: IHobbiesItem = req.body;
     
     // assign new values to existing item
-    file.hobbies[index].title = body.title;
-    file.hobbies[index].passion = body.passion;
+    file.items[index].title = body.title;
+    file.items[index].description = body.description;
+    file.items[index].passion = body.passion;
+    
 
     // save JSON
     fs.writeFileSync(fileLocation, JSON.stringify(file));
 
     // send success message
-    res.status(200);
+    res.status(200).send();
 }
 
 export async function deleteHobbies(req: Request, res: Response, next: NextFunction) {
@@ -54,13 +58,13 @@ export async function deleteHobbies(req: Request, res: Response, next: NextFunct
     const id = req.params.id;
     
     // retrieve all items expect the one you want to delete
-    const allHobbiesExpectTheRemovedOne = file.hobbies.filter(item => {
+    const allHobbiesExpectTheRemovedOne = file.items.filter(item => {
         return item.id != id; // strict check does not remove the given id
     });
 
     // save JSON
-    fs.writeFileSync(fileLocation, JSON.stringify({ hobbies: allHobbiesExpectTheRemovedOne }));
+    fs.writeFileSync(fileLocation, JSON.stringify({ items: allHobbiesExpectTheRemovedOne }));
 
     // send success message
-    res.status(200);
+    res.status(200).send();
 }

@@ -4,25 +4,30 @@ import { Request, Response, NextFunction } from 'express';
 
 const fileLocation = path.join(__dirname, '../../../../reactjs/src/exercise/data/details.json');
 const file = JSON.parse(fs.readFileSync(fileLocation, 'utf-8'));
-export interface Idetails {
-    details: {
-        address: string;
-        city: string;
-        emailAddress: string;
-        phoneNumber: string;
-    }
+export interface IDetails {
+    address: string;
+    city: string;
+    phoneNumber: string;
+    emailAddress: string;
+    story1: string;
+    story2: string;
 }
 
-export async function getDetails(req: Request, res: Response, next: NextFunction): Promise<Response<Idetails>> {
+export async function getDetails(req: Request, res: Response, next: NextFunction): Promise<Response<IDetails>> {
     return res.status(200).json(file);
 };
 
 export async function updateDetails(req: Request, res: Response, next: NextFunction): Promise<void> {
-    file.details.address = req.body.address
-    file.details.city = req.body.city
-    file.details.emailAddress = req.body.emailAddress
-    file.details.phoneNumber = req.body.phoneNumber
+    // get the post body
+    const body: IDetails = req.body;
+
+    file.address = body.address;
+    file.city = body.city;
+    file.phoneNumber = body.phoneNumber;
+    file.emailAddress = body.emailAddress;
+    file.story1 = body.story1;
+    file.story2 = body.story2;
 
     fs.writeFileSync(fileLocation, JSON.stringify(file));
-    res.status(200);
+    res.status(200).send();
 };
