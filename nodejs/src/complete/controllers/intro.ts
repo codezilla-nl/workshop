@@ -21,5 +21,5 @@ export async function updateIntro(req: Request, res: Response, next: NextFunctio
     file.intro.description = req.body.description
 
     fs.writeFileSync(fileLocation, JSON.stringify(file));
-    res.status(200).send({ 'updated': true });
+    res.status(200);
 };

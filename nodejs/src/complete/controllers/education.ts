@@ -31,7 +31,7 @@ export async function addEducation(req: Request, res: Response, next: NextFuncti
     fs.writeFileSync(fileLocation, JSON.stringify(file.education));
 
     // send success message
-    res.status(200).send({ 'added': true });
+    res.status(200);
 }
 
 export async function updateEducation(req: Request, res: Response, next: NextFunction): Promise<void> {
@@ -51,7 +51,7 @@ export async function updateEducation(req: Request, res: Response, next: NextFun
     fs.writeFileSync(fileLocation, JSON.stringify(file));
 
     // send success message
-    res.status(200).send({ 'updated': true });
+    res.status(200);
 };
 
 export async function deleteEducation(req: Request, res: Response, next: NextFunction) {
@@ -67,5 +67,5 @@ export async function deleteEducation(req: Request, res: Response, next: NextFun
     fs.writeFileSync(fileLocation, JSON.stringify({ educations: allEducationsExpectTheRemovedOne }));
 
     // send success message
-    res.status(200).send({ 'deleted': true });
+    res.status(200);
 }

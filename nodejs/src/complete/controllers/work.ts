@@ -31,7 +31,7 @@ export async function addWork(req: Request, res: Response, next: NextFunction) {
     fs.writeFileSync(fileLocation, JSON.stringify(file.work));
 
     // send success message
-    res.status(200).send({ 'added': true });
+    res.status(200);
 };
 
 export async function updateWork(req: Request, res: Response, next: NextFunction): Promise<void> {
@@ -52,7 +52,7 @@ export async function updateWork(req: Request, res: Response, next: NextFunction
     fs.writeFileSync(fileLocation, JSON.stringify(file));
 
     // send success message
-    res.status(200).send({ 'updated': true });
+    res.status(200);
 };
 
 export async function deleteWork(req: Request, res: Response, next: NextFunction) {
@@ -68,5 +68,5 @@ export async function deleteWork(req: Request, res: Response, next: NextFunction
     fs.writeFileSync(fileLocation, JSON.stringify({ educations: allWorkExpectTheRemovedOne }));
 
     // send success message
-    res.status(200).send({ 'deleted': true });
+    res.status(200);
 }

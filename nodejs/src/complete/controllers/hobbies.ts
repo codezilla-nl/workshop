@@ -28,7 +28,7 @@ export async function addHobbies(req: Request, res: Response, next: NextFunction
     fs.writeFileSync(fileLocation, JSON.stringify(file.hobbies));
 
     // send success message
-    res.status(200).send({ 'added': true });
+    res.status(200);
 }
 
 export async function updateHobbies(req: Request, res: Response, next: NextFunction) {
@@ -46,7 +46,7 @@ export async function updateHobbies(req: Request, res: Response, next: NextFunct
     fs.writeFileSync(fileLocation, JSON.stringify(file));
 
     // send success message
-    res.status(200).send({ 'updated': true });
+    res.status(200);
 }
 
 export async function deleteHobbies(req: Request, res: Response, next: NextFunction) {
@@ -62,5 +62,5 @@ export async function deleteHobbies(req: Request, res: Response, next: NextFunct
     fs.writeFileSync(fileLocation, JSON.stringify({ hobbies: allHobbiesExpectTheRemovedOne }));
 
     // send success message
-    res.status(200).send({ 'deleted': true });
+    res.status(200);
 }

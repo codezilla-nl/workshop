@@ -24,5 +24,5 @@ export async function updateDetails(req: Request, res: Response, next: NextFunct
     file.details.phoneNumber = req.body.phoneNumber
 
     fs.writeFileSync(fileLocation, JSON.stringify(file));
-    res.status(200).send({ 'updated': true });
+    res.status(200);
 };
