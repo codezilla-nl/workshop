@@ -143,7 +143,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n        \"address\": \"Oudegracht 300\",\n        \"city\": \"Utrecht\",\n        \"emailAddress\": \"info@me.com\",\n        \"phoneNumber\": \"+31687654321\"\n    }"
+					"raw": "{\n  \"address\": \"Hier\",\n  \"city\": \"\",\n  \"phoneNumber\": \"\",\n  \"emailAddress\": \"\",\n  \"story1\": \"\",\n  \"story2\": \"\"\n}"
 				},
 				"url": {
 					"raw": "http://localhost:4000/details/",
@@ -173,7 +173,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"id\": 0,\n    \"period\": \"1980-1990\",\n    \"institute\": \"University of Utrecht\",\n    \"degree\": \"Msc\",\n    \"certificate\": true\n}"
+					"raw": "{\n      \"degree\": \"\",\n      \"location\": \"\",\n      \"institute\": \"TU\",\n      \"certificate\": true,\n      \"period\": \"mm-yyyy - mm-yyyy\"\n}"
 				},
 				"url": {
 					"raw": "http://localhost:4000/education/0",
@@ -203,7 +203,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"aboutMe\": \"Patrick\",\n    \"description\": \"This is me\"\n}"
+					"raw": "{\n    \"aboutMe\": \"Hi, My name is ___\",\n    \"age\": 0,\n    \"description\": \"I am a ___ with a passion for ___!\",\n    \"welcomeMessage\": \"Welcome to today's workshop!\",\n    \"goal\": \"The goal will be to create your own portfolio app in React, or at least the start of one.\"\n}"
 				},
 				"url": {
 					"raw": "http://localhost:4000/intro/",
@@ -233,7 +233,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"title\": \"Writing\",\n    \"passion\": 3\n}"
+					"raw": "{\n    \"title\": \"Drinking\",\n    \"description\": \"Mmmmm, drinking\",\n    \"passion\": 4\n}"
 				},
 				"url": {
 					"raw": "http://localhost:4000/hobbies/0",
@@ -263,7 +263,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"role\": \"QA\",\n    \"company\": \"Another company\",\n    \"location\": \"Utrecht\",\n    \"skills\": [\"Cypress\"],\n    \"period\": \"2016-2018\"\n}"
+					"raw": "{\n    \"role\": \"Test Engineer\",\n    \"company\": \"Current_company\",\n    \"location\": \"???\",\n    \"skills\": [\n        \"E2E, Automated Testing, Cucumber, Gherking\"\n    ],\n    \"period\": \"05-2020 - Present\"\n}"
 				},
 				"url": {
 					"raw": "http://localhost:4000/work/0",
@@ -293,7 +293,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"period\": \"1990-1998\",\n    \"institute\": \"Primary School\",\n    \"certificate\": true\n}"
+					"raw": "{\n      \"id\": 1000,\n      \"degree\": \"\",\n      \"location\": \"\",\n      \"institute\": \"TU\",\n      \"certificate\": true,\n      \"period\": \"mm-yyyy - mm-yyyy\"\n    }"
 				},
 				"url": {
 					"raw": "http://localhost:4000/education",
@@ -322,7 +322,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"title\": \"Writing\",\n    \"passion\": 3\n}"
+					"raw": "{\n    \"id\": 100,\n    \"title\": \"Drinking\",\n    \"description\": \"Mmmmm, drinking\",\n    \"passion\": 4\n}"
 				},
 				"url": {
 					"raw": "http://localhost:4000/hobbies",
@@ -351,7 +351,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"role\": \"CEO\",\n    \"company\": \"Another company\",\n    \"location\": \"Utrecht\",\n    \"skills\": [\"Cypress\"],\n    \"period\": \"2016-2018\"\n}"
+					"raw": "{\n    \"id\": 100,\n    \"role\": \"aaaaa Engineer\",\n    \"company\": \"Current_company\",\n    \"location\": \"???\",\n    \"skills\": [\n        \"E2E, Automated Testing, Cucumber, Gherking\"\n    ],\n    \"period\": \"05-2020 - Present\"\n}"
 				},
 				"url": {
 					"raw": "http://localhost:4000/work",
