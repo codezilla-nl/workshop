@@ -2,7 +2,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 import { Request, Response, NextFunction } from 'express';
 
-const fileLocation = path.join(__dirname, '../../data/details.json');
+const fileLocation = path.join(__dirname, '../../../../reactjs/src/exercise/data/details.json');
 const file = JSON.parse(fs.readFileSync(fileLocation, 'utf-8'));
 export interface Idetails {
     details: {

@@ -3,7 +3,7 @@ import * as path from 'path';
 import { Request, Response, NextFunction } from 'express';
 
 // get the content from the JSON file
-const fileLocation = path.join(__dirname, '../../data/education.json');
+const fileLocation = path.join(__dirname, '../../../../reactjs/src/exercise/data/education.json');
 const file = JSON.parse(fs.readFileSync(fileLocation, 'utf-8'));
 
 export interface Ieducation {
