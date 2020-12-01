@@ -65,8 +65,6 @@ export async function deleteEducation(req: Request, res: Response, next: NextFun
         return item.id != id; // strict check does not remove the given id
     });
 
-console.log(allEducationsExpectTheRemovedOne);
-
     // save JSON
     fs.writeFileSync(fileLocation, JSON.stringify({ items: allEducationsExpectTheRemovedOne }));
 
