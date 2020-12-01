@@ -5,9 +5,10 @@
   "main": "dist/server.js",
   "scripts": {
     "start": "./node_modules/.bin/npm-run-all clean build dev",
+    "start:complete": "./node_modules/.bin/npm-run-all clean build dev:complete",
     "build": "./node_modules/.bin/tsc",
     "clean": "./node_modules/.bin/rimraf dist",
-    "dev": "./node_modules/.bin/nodemon src/complete/server.ts --watch src --exec ts-node --allowJs",
+    "dev": "./node_modules/.bin/nodemon src/exercise/server.ts --watch src --exec ts-node --allowJs",
     "dev:complete": "./node_modules/.bin/nodemon src/complete/server.ts --watch src --exec ts-node --allowJs",
     "exe1": "./node_modules/.bin/ts-node src/exercise-types/interfaces-and-types.ts",
     "exe2": "./node_modules/.bin/ts-node src/exercise-types/advanced-types.ts"
