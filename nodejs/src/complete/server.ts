@@ -19,7 +19,7 @@ import {
     deleteWork
 } from './controllers/';
 
- // Init Express with body-parser and router
+// Init Express with body-parser and router
 const app = express();
 const { Router } = express;
 const router: express.Router = Router();
