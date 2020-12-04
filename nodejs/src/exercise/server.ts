@@ -1,4 +1,5 @@
 import * as express from 'express';
+import * as bp from 'body-parser';
 import {
     intro
 } from './controllers/';
@@ -9,6 +10,7 @@ import {
 const app = express();
 const { Router } = express;
 const router: express.Router = Router();
+app.use(bp.json());
 app.use('/', router);
 
 /**
